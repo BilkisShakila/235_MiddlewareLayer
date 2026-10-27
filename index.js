@@ -40,3 +40,9 @@ function successResponse(res, data, status = 200) {
         status: true, message, data, error: null,
     })
 }
+
+function errorResponse(res, message, status, details = null) {
+    return res.status(status).json({
+        status: false, message, data: null, error: details,
+    })
+}
