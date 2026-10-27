@@ -13,3 +13,6 @@ const pool = new Pool({
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
 });
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
